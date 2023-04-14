@@ -4,37 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APA - Document</title>
+    <title> APA - Document</title>
 </head>
 <body>
-    <form action="">
+    <form action="save_paper" method="POST" >
+
+        {% csrf_token %}
+
         <table>
-            <tr>
-                <td>
-                    <input type="text" name="std_name" id="">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="text" name="prof_name" id="">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="text" name="cos_id" id="">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="date" name="date" id="">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="text" name="title" id="">
-                </td>
-            </tr>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="text" name="title" id="" placeholder="type paper title...">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="std_name" id="" placeholder="enter student name...">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="faculty" id="" placeholder="faculty or department">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="cos_id" id="" placeholder="unit or class title?">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="prof_name" id="" placeholder="Instructor name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="date" name="date" id="">
+                    </td>
+                </tr>
+
+            </tbody>
         </table>
+        <input type="submit" value="Save">
 
     </form>
 </body>
